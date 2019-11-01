@@ -6,7 +6,7 @@ int random = (int)random(0,255);
 void setup(){
 	//your code here
 	size(500,500);
-	particle = new Particle[169];
+	particle = new Particle[1000];
  	for(int i = 0; i < particle.length; i++){
  		x = 250;
  		y = 250;
@@ -36,7 +36,8 @@ class Particle
 	Particle(double x, double y, double speed){
  		myX = x;
  		myY = y;
- 		mySpeed = speed;
+ 		mySpeed = Math.random()*10;
+ 		myAngle = Math.random()*2*Math.PI;
  	}
  	void show(){
  		fill((int)(Math.random()*255+1),(int)(Math.random()*255+1),(int)(Math.random()*255+1));
@@ -44,9 +45,17 @@ class Particle
 
  	}
  	void move(){
-		myX += mySpeed;
-		myY += mySpeed;
+
+		myX += (float) (Math.cos (myAngle) * mySpeed);
+		myY += (float) (Math.sin(myAngle) * mySpeed);
+		if(myX > 1000 || myX < -1000){
+			myX = 250;
+		}
+		if(myY > 1000 || myY < -1000){
+			myY = 250;
+		}
  	}
+ 
 }
 
 class OddballParticle //inherits from Particle
