@@ -74,9 +74,9 @@ class OddballParticle extends Particle//inherits from Particle
 		ellipse(x, y, 50,50);
 	}
 	void move(){
-		x+= (float)random(-1,1);
-		y+=(float)random(-1,1);
-		if(x <5 || y <5){
+		x += (int)random(-4,4);
+		y += (int)random(-4,4);
+		if(x <5 || y <5 || x > 495 || y > 495){
 			x = 250;
 			y=250;
 		}
