@@ -2,7 +2,7 @@
 Particle[] particle;
  int x = (int) (Math.random() * 500) - 50;
  int y = (int) (Math.random() * 500) - 50;
-int random = (int)random(0,255);
+int random = (int)(Math.random()*255);
 void setup(){
 	//your code here
 	size(500,500);
@@ -74,9 +74,9 @@ class OddballParticle extends Particle//inherits from Particle
 		ellipse(x, y, 50,50);
 	}
 	void move(){
-		x += (int)random(-4,4);
-		y += (int)random(-4,4);
-		if(x <5 || y <5 || x > 495 || y > 495){
+		x += (int)(Math.random()*8-4);
+		y += (int)(Math.random()*8-4);
+				if(x <5 || y <5 || x > 495 || y > 495){
 			x = 250;
 			y=250;
 		}
