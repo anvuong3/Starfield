@@ -9,8 +9,8 @@ void setup(){
  	for(int i = 0; i < particle.length; i++){
  		x = 250;
  		y = 250;
- 		particle[i] = new Particle(x,y, random(-10.10));
- 		particle[0] = new OddballParticle(x,y,random(-1,1));
+ 		particle[i] = new Particle(x,y,3);
+ 		particle[0] = new OddballParticle(x,y,3);
  	}
  	background(0);
 
