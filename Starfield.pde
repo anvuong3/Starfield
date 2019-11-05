@@ -2,7 +2,6 @@
 Particle[] particle;
  int x = (int) (Math.random() * 500) - 50;
  int y = (int) (Math.random() * 500) - 50;
-int randoms = (int)(Math.random()*255);
 void setup(){
 	//your code here
 	size(500,500);
